@@ -50,7 +50,7 @@ This project implements a feedback agent that reviews and improves Python code, 
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/ALLUPRASAD/Feedback_Agent_code_reviewer.git
     cd Feedback_Agent_code_reviewer
     ```
 
