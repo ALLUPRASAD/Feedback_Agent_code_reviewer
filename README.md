@@ -142,7 +142,9 @@ This project implements a feedback agent that reviews and improves Python code, 
     ```bash
     curl [http://0.0.0.0:8000/errors/your_request_id](http://0.0.0.0:8000/errors/your_request_id)
     ```
-  **Example Response:**
+    **Example Response:**
           ```json
           {"request_id":"4751ad2c-9438-4010-a86a-d858a29524f2","log":"No logs found."}
           ```
+
+    
