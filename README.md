@@ -112,9 +112,7 @@ This project implements a feedback agent that reviews and improves Python code, 
     curl [http://0.0.0.0:8000/errors/your_request_id](https://www.google.com/search?q=http://0.0.0.0:8000/errors/your_request_id)
     ```
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit pull requests or create issues for bug reports or feature requests.
 
 ## License
 
