@@ -21,7 +21,6 @@ This project implements a feedback agent that reviews and improves Python code, 
 * **Uvicorn:** An ASGI server for running the FastAPI application.
 * **Docker:** Containerizes the application for easy deployment.
 
-## Getting Started
 ## code structure
 
                     Feedback_Agent_code_reviewer/
