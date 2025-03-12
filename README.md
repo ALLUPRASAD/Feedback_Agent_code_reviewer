@@ -1,4 +1,3 @@
-# Feedback_Agent_code_reviewer
 
 # Feedback Agent Code Reviewer
 
@@ -105,6 +104,7 @@ This project implements a feedback agent that reviews and improves Python code, 
 
 ### Example Usage
 
+
 1.  **Upload a file:**
 
     ```bash
@@ -114,23 +114,27 @@ This project implements a feedback agent that reviews and improves Python code, 
 2.  **Analyze code:**
 
     ```bash
-    curl -X POST [http://0.0.0.0:8000/analyze/](https://www.google.com/search?q=http://0.0.0.0:8000/analyze/) -F "user_code=@your_code.py" -F "file_path=data/uploads/your_file_uuid.csv"
+    curl -X POST [http://0.0.0.0:8000/analyze/](http://0.0.0.0:8000/analyze/) -F "user_code=@your_code.py" -F "file_path=data/uploads/your_file_uuid.csv"
     ```
 
 3.  **Provide feedback:**
 
     ```bash
-    curl -X POST -H "Content-Type: application/json" -d '{"request_id": "your_request_id", "feedback": "Your feedback message"}' [http://0.0.0.0:8000/feedback/](https://www.google.com/search?q=http://0.0.0.0:8000/feedback/)
+    curl -X POST -H "Content-Type: application/json" -d '{"request_id": "your_request_id", "feedback": "Your feedback message"}' [http://0.0.0.0:8000/feedback/](http://0.0.0.0:8000/feedback/)
     ```
+
+    * **Example Response:**
+        ```json
+        {"status":"success","message":"Sure, I can help with that. However, I need the code that you want me to analyze. Could you please provide it?"}
+        ```
 
 4.  **Get Error logs:**
 
     ```bash
-    curl [http://0.0.0.0:8000/errors/your_request_id](https://www.google.com/search?q=http://0.0.0.0:8000/errors/your_request_id)
+    curl [http://0.0.0.0:8000/errors/your_request_id](http://0.0.0.0:8000/errors/your_request_id)
     ```
 
-
-
-## License
-
-This project is licensed under the MIT License.
+ * **Example Response:**
+        ```json
+        {"request_id":"4751ad2c-9438-4010-a86a-d858a29524f2","log":"No logs found."}
+        ```
