@@ -43,7 +43,7 @@ This project implements a feedback agent that reviews and improves Python code, 
 
 * Python 3.11+
 * Docker (for containerized deployment)
-* OpenAI API key
+* OpenAI API key which need export as ENV 
 
 ### Installation
 
