@@ -108,48 +108,11 @@ This project implements a feedback agent that reviews and improves Python code, 
 
 ### Example Usage
 
+run app_new.py
 
-1.  **Upload a file:**
+    <p align="center">
+       <img src="data/b.png" alt="Original Image" width="550" height="550">
+   </p> 
 
-    ```bash
-    curl -X POST -F "file=@your_file.csv" [http://0.0.0.0:8000/upload/](http://0.0.0.0:8000/upload/)
-    ```
-     **Example Response:**
-          ```json
-         {"request_id":"e0dc5e67-e247-41b2-8382-d7744bd2f34e","file_path":"data/uploads/e0dc5e67-e247-41b2-8382-d7744bd2f34e.csv"}
-          ```
-    
-
-
-2.  **Analyze code:**
-
-    ```bash
-    curl -X POST [http://0.0.0.0:8000/analyze/](http://0.0.0.0:8000/analyze/) -F "user_code=@your_code.py" -F "file_path=data/uploads/your_file_uuid.csv"
-    ```
-    **Example Response:**
-            ```json
-           {"request_id":"4fb377fa-8bd3-4f83-9759-30fde00dcb42","improved_code":"The provided code is technically correct and will work without any issues if the DataFrame 'df' contains only numerical data. However, if the DataFrame contains non-numerical data (like strings or dates), this function will either fail or produce unexpected results.\n\nHere's a more robust version of the function that checks if the data is numeric before attempting to multiply it:\n\n```python\nimport pandas as pd\nimport numpy as np\n\ndef transform_data(df):\n    df = df.copy()  # create a copy of the input DataFrame to avoid modifying the original one\n    for col in df.columns:\n        if np.issubdtype(df[col].dtype, np.number):  # check if the column data type is numeric\n            df[col] = df[col] * 2  # multiply only numeric columns\n    return df\n```\n\nThis function will work correctly with DataFrames that contain both numerical and non-numerical data. It will only transform the numerical data and leave the non-numerical data unchanged.\n\nAlso, it's a good practice to add some error handling and input validation to your function. For example, you could add a check at the beginning of the function to ensure that the input is indeed a pandas DataFrame:\n\n```python\ndef transform_data(df):\n    if not isinstance(df, pd.DataFrame):\n        raise ValueError(\"Input should be a pandas DataFrame\")\n    df = df.copy()\n    for col in df.columns:\n        if np.issubdtype(df[col].dtype, np.number):\n            df[col] = df[col] * 2\n    return df\n```\n\nThis will make your function more robust and easier to use correctly.","output_file":null,"status":"error"}
-            ```
-
-3.  **Provide feedback:**
-
-    ```bash
-    curl -X POST -H "Content-Type: application/json" -d '{"request_id": "your_request_id", "feedback": "Your feedback message"}' [http://0.0.0.0:8000/feedback/](http://0.0.0.0:8000/feedback/)
-    ```
-
-    **Example Response:**
-        ```json
-        {"status":"success","message":"Sure, I can help with that. However, I need the code that you want me to analyze. Could you please provide it?"}
-        ```
-
-4.  **Get Error logs:**
-
-    ```bash
-    curl [http://0.0.0.0:8000/errors/your_request_id](http://0.0.0.0:8000/errors/your_request_id)
-    ```
-    **Example Response:**
-          ```json
-          {"request_id":"4751ad2c-9438-4010-a86a-d858a29524f2","log":"No logs found."}
-          ```
 
     
