@@ -6,7 +6,7 @@ This project implements a feedback agent that reviews and improves Python code, 
 ### Flow
 
    <p align="center">
-       <img src="data/a.png" alt="Original Image" width="550" height="550">
+       <img src="data/a.png" alt="Original Image" width="950" height="550">
    </p> 
 
 ## Features
