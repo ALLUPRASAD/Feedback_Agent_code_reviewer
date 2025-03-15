@@ -58,8 +58,7 @@ This project implements a feedback agent that reviews and improves Python code, 
 
     ```bash
     python3 -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    venv\Scripts\activate  # On Windows
+    source venv/bin/activate  
     ```
 
 3.  **Install dependencies:**
